@@ -1,0 +1,71 @@
+int sw = 2;
+int r1 = 5;
+int g1 = 6;
+int y1 = 7;
+int r2 = 10;
+int g2 = 11;
+int y2 = 12;
+void setup()
+{
+  pinMode(sw, INPUT);
+  pinMode(r1, OUTPUT);
+  pinMode(g1, OUTPUT);
+  pinMode(y1, OUTPUT);
+  pinMode(r2, OUTPUT);
+  pinMode(g2, OUTPUT);
+  pinMode(y2, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int val = digitalRead(sw);
+  Serial.println(val);
+  if(val == 0)
+  {
+    digitalWrite(r1, 1);
+    digitalWrite(g2, 1);
+  }
+  else
+  {
+    digitalWrite(r1, 0);
+    digitalWrite(g2, 0);
+    
+    digitalWrite(y1, 1);
+    digitalWrite(y2, 1);
+    delay(500);
+    digitalWrite(y1, 0);
+    digitalWrite(y2, 0);
+    delay(500);
+    digitalWrite(y1, 1);
+    digitalWrite(y2, 1);
+    delay(500);
+    digitalWrite(y1, 0);
+    digitalWrite(y2, 0);
+    delay(500);
+    digitalWrite(y1, 1);
+    digitalWrite(y2, 1);
+    delay(500);
+    digitalWrite(y1, 0);
+    digitalWrite(y2, 0);
+    delay(500);
+    digitalWrite(y1, 1);
+    digitalWrite(y2, 1);
+    delay(500);
+    digitalWrite(y1, 0);
+    digitalWrite(y2, 0);
+    delay(500);
+    digitalWrite(y1, 1);
+    digitalWrite(y2, 1);
+    delay(500);
+    digitalWrite(y1, 0);
+    digitalWrite(y2, 0);
+    delay(500);
+    
+    digitalWrite(g1, 1);
+    digitalWrite(r1, 1);
+    delay(3000);
+    digitalWrite(g1, 0);
+    digitalWrite(r1, 0);
+  }
+}
